@@ -2,7 +2,7 @@
 
 module Thredded
   class MessageboardsController < Thredded::ApplicationController
-    before_action :thredded_require_login!, only: %i[new create edit update]
+    before_action :thredded_require_login!, only: %i[index new create edit update]
 
     after_action :verify_authorized, except: %i[index]
     after_action :verify_policy_scoped, except: %i[new create edit update]
